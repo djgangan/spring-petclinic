@@ -4,7 +4,7 @@ pipeline {
   agent none
 
   environment {
-    IMAGE = "liatrio/petclinic-tomcat"
+    IMAGE = "djgangan/petclinic-tomcat"
   }
 
   stages {
@@ -49,5 +49,62 @@ pipeline {
         sh 'sleep 4'
       }
     }
+    stage('QA') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+    stage('Functional test - QA') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+    stage('Perf') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+        stage('QA') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+        stage('Pre-prod') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+        stage('Smoke Test - Pre-prod') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+        stage('UAT - Pre-prod') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+        stage('Prod') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
+
   }
 }

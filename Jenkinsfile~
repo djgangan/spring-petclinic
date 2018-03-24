@@ -6,7 +6,7 @@ pipeline {
   agent none
 
   environment {
-    IMAGE = "djgangan/petclinic-tomcat"
+    IMAGE = "liatrio/petclinic-tomcat"
   }
 
   stages {
