@@ -70,13 +70,7 @@ pipeline {
         sh 'sleep 4'
       }
     }
-        stage('QA') {
-      agent any
-      steps {
-        //sample dummy step
-        sh 'sleep 4'
-      }
-    }
+
         stage('Pre-prod') {
       agent any
       steps {
