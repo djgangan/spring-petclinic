@@ -35,6 +35,7 @@ pipeline {
         sh "docker run -d -p 9966:8080 --name petclinic-tomcat-temp ${env.IMAGE}:${TAG}"
       }
     }
+    
     stage('Smoke-Test Dev') {
       agent any
       steps {
@@ -70,13 +71,7 @@ pipeline {
         sh 'sleep 4'
       }
     }
-        stage('QA') {
-      agent any
-      steps {
-        //sample dummy step
-        sh 'sleep 4'
-      }
-    }
+
         stage('Pre-prod') {
       agent any
       steps {
@@ -105,6 +100,6 @@ pipeline {
         sh 'sleep 4'
       }
     }
-
+    
   }
 }
