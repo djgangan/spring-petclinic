@@ -93,7 +93,13 @@ pipeline {
         sh 'sleep 4'
       }
     }
-
+        stage('Prod') {
+      agent any
+      steps {
+        //sample dummy step
+        sh 'sleep 4'
+      }
+    }
     
   }
 }
